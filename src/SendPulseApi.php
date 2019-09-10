@@ -1065,6 +1065,16 @@ class SendpulseApi implements SendPulseApiContract
         return $this->handleResult( $requestResult );
     }
 
+    public function editTemplate($id,$body) {
+        $data = array(                                    
+            'id' => $id,
+            'body' => base64_encode($body)            
+        );
+
+        $requestResult = $this->sendRequest( 'template/edit/' .$id, 'POST', $data );
+
+        return $this->handleResult( $requestResult );
+    }
  
 
     public function removeTemplate( $id ) {
