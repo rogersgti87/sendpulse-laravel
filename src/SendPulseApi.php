@@ -406,6 +406,26 @@ class SendpulseApi implements SendPulseApiContract
         return $this->handleResult( $requestResult );
     }
 
+    public function getCampaignInfoBookId($bookid) {
+        if( empty( $bookid ) ) {
+            return $this->handleError( 'Empty bookid' );
+        }
+
+        $requestResult = $this->sendRequest( 'addressbooks/'.$bookid.'/campaigns');
+
+        return $this->handleResult( $requestResult );
+    }
+
+    
+    public function getCampanha($id) {        
+
+        $requestResult = $this->sendRequest( 'campaigns/'.$id);
+
+        return $this->handleResult( $requestResult );
+        
+    }
+
+
     /**
      * Get campaign statistic by countries
      *
@@ -450,8 +470,8 @@ class SendpulseApi implements SendPulseApiContract
      * @param string $attachments
      * @return mixed
      */
-    public function createCampaign( $senderName, $senderEmail, $subject, $body, $bookId, $name = '', $attachments = '' ) {
-        if( empty( $senderName ) || empty( $senderEmail ) || empty( $subject ) || empty( $body ) || empty( $bookId ) ) {
+    public function createCampaign( $senderName, $senderEmail, $subject, $template, $bookId, $name = '', $attachments = '', $send_date ) {
+        if( empty( $senderName ) || empty( $senderEmail ) || empty( $subject ) || empty( $bookId ) ) {
             return $this->handleError( 'Not all data.' );
         }
 
@@ -462,13 +482,32 @@ class SendpulseApi implements SendPulseApiContract
             'sender_name'  => $senderName,
             'sender_email' => $senderEmail,
             'subject'      => $subject,
-            'body'         => base64_encode( $body ),
+            'template_id'  => $template,
             'list_id'      => $bookId,
             'name'         => $name,
-            'attachments'  => $attachments
-        );
+            'attachments'  => $attachments,
+            'send_date'    => $send_date            
+            );
 
         $requestResult = $this->sendRequest( 'campaigns', 'POST', $data );
+
+        return $this->handleResult( $requestResult );
+    }
+
+    public function editCampaign($id,$name, $senderName, $senderEmail, $subject, $body,$template_id, $send_date ) {
+      
+        $data = array(            
+            'id'            => $id,
+            'name'         => $name,
+            'sender_name'  => $senderName,
+            'sender_email' => $senderEmail,
+            'subject'      => $subject,
+            'body'         => base64_encode( $body ),
+            'template_id'   => null,                                    
+            'send_date'    => $send_date
+        );
+
+        $requestResult = $this->sendRequest( "campaigns", 'PATCH', $data );
 
         return $this->handleResult( $requestResult );
     }
@@ -999,4 +1038,50 @@ class SendpulseApi implements SendPulseApiContract
 
         return $this->handleResult( $requestResult );
     }
+
+    public function getTemplates($p = NULL) {        
+
+        $requestResult = $this->sendRequest( 'templates'.$p);
+
+        return $this->handleResult( $requestResult );
+    }
+
+    public function getTemplateID($id) {        
+
+        $requestResult = $this->sendRequest( 'template/' .$id);
+
+        return $this->handleResult( $requestResult );
+    }
+
+    public function createTemplate($name,$body) {
+        $data = array(                        
+            'name' => $name,            
+            'body' => base64_encode($body),            
+            'lang' => 'br'
+        );
+
+        $requestResult = $this->sendRequest( 'template', 'POST', $data );
+
+        return $this->handleResult( $requestResult );
+    }
+
+ 
+
+    public function removeTemplate( $id ) {
+        if( empty( $id ) ) {
+            return $this->handleError( 'Empty book id' );
+        }
+
+        $data = array(                        
+            'template_id' => $id           
+        );
+
+        $requestResult = $this->sendRequest( 'template', 'DELETE', $data);
+
+        
+
+        return $this->handleResult( $requestResult );
+    }
+
+
 }
