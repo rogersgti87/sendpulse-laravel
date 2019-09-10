@@ -102,6 +102,9 @@ interface SendPulseApi
      */
     public function getCampaignInfo($id);
 
+    public function getCampaignInfoBookId($bookid);
+
+    public function getCampanha($id);
     /**
      * Get campaign statistic by countries
      *
@@ -127,7 +130,9 @@ interface SendPulseApi
      * @param null $name
      * @param null $attachments
      */
-    public function createCampaign($senderName, $senderEmail, $subject, $body, $bookId, $name = NULL, $attachments = NULL);
+    public function createCampaign($senderName, $senderEmail, $subject, $template , $bookId, $name = NULL, $attachments = NULL, $send_date);
+
+    public function editCampaign( $id,$name, $senderName, $senderEmail, $subject, $body,$template_id, $send_date );
 
     /**
      * Cancel campaign
@@ -340,4 +345,12 @@ interface SendPulseApi
      * @param array $additionalParams
      */
     public function createPushTask($taskInfo, $additionalParams = array());
+
+
+    public function getTemplates($p = NULL);
+    public function getTemplateID($id);
+    public function createTemplate($name, $body);
+    public function editTemplate( $id, $body);
+    public function removeTemplate($id);
+
 }
