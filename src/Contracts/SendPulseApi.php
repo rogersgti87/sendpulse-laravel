@@ -130,9 +130,9 @@ interface SendPulseApi
      * @param null $name
      * @param null $attachments
      */
-    public function createCampaign($senderName, $senderEmail, $subject, $template , $bookId, $name = NULL, $attachments = NULL, $send_date);
+    public function createCampaign($senderName, $senderEmail, $subject, $body, $template , $bookId, $name = NULL, $attachments = NULL, $send_date);
 
-    public function editCampaign( $id,$name, $senderName, $senderEmail, $subject, $body,$template_id, $send_date );
+    public function editCampaign( $senderName, $senderEmail, $subject, $body,$template_id, $send_date );
 
     /**
      * Cancel campaign
