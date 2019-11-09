@@ -470,7 +470,7 @@ class SendpulseApi implements SendPulseApiContract
      * @param string $attachments
      * @return mixed
      */
-    public function createCampaign( $senderName, $senderEmail, $subject, $template, $bookId, $name = '', $attachments = '', $send_date ) {
+    public function createCampaign( $senderName, $senderEmail, $subject, $body, $template_id, $bookId, $name = '', $attachments = '', $send_date ) {
         if( empty( $senderName ) || empty( $senderEmail ) || empty( $subject ) || empty( $bookId ) ) {
             return $this->handleError( 'Not all data.' );
         }
@@ -482,7 +482,9 @@ class SendpulseApi implements SendPulseApiContract
             'sender_name'  => $senderName,
             'sender_email' => $senderEmail,
             'subject'      => $subject,
-            'template_id'  => $template,
+            'body'         => base64_encode( $body ),
+            'body'         => $body,
+            'template_id'   => null,
             'list_id'      => $bookId,
             'name'         => $name,
             'attachments'  => $attachments,
@@ -494,7 +496,7 @@ class SendpulseApi implements SendPulseApiContract
         return $this->handleResult( $requestResult );
     }
 
-    public function editCampaign($id,$name, $senderName, $senderEmail, $subject, $body,$template_id, $send_date ) {
+    public function editCampaign($senderName, $senderEmail, $subject, $body,$template_id, $send_date ) {
       
         $data = array(            
             'id'            => $id,
