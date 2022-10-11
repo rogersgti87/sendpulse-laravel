@@ -1,10 +1,10 @@
 <?php
 
-namespace NikitaKiselev\SendPulse;
+namespace Rogersgti87\SendPulse;
 
 use Illuminate\Support\Manager;
-use NikitaKiselev\SendPulse\Storage\FileTokenStorage;
-use NikitaKiselev\SendPulse\Storage\SessionTokenStorage;
+use Rogersgti87\SendPulse\Storage\FileTokenStorage;
+use Rogersgti87\SendPulse\Storage\SessionTokenStorage;
 
 class TokenStorageManager extends Manager
 {
