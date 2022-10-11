@@ -1,6 +1,6 @@
 <?php
 
-namespace Rogersgti\SendPulse\Contracts;
+namespace Rogersgti87\SendPulse\Contracts;
 
 /*
  * Interface for SendPulse REST API
