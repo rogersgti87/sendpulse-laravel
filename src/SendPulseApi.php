@@ -1,6 +1,6 @@
 <?php
 
-namespace NikitaKiselev\SendPulse;
+namespace Rogersgti87\SendPulse;
 
 /*
  * SendPulse REST API PHP Class
@@ -11,11 +11,11 @@ namespace NikitaKiselev\SendPulse;
  *
  */
 
-use NikitaKiselev\SendPulse\Contracts\TokenStorage;
+use Rogersgti87\SendPulse\Contracts\TokenStorage;
 use stdClass;
 use Memcache;
 use Exception;
-use NikitaKiselev\SendPulse\Contracts\SendPulseApi as SendPulseApiContract;
+use Rogersgti87\SendPulse\Contracts\SendPulseApi as SendPulseApiContract;
 
 class SendpulseApi implements SendPulseApiContract
 {
