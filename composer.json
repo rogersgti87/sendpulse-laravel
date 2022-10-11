@@ -1,5 +1,5 @@
 {
-    "name": "nikitakiselev/sendpulse",
+    "name": "rogersgti87/sendpulse",
     "description": "SendPulse REST API client for Laravel",
     "require": {
         "guzzlehttp/guzzle": "^7.5.0"
