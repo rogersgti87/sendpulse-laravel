@@ -6,7 +6,7 @@
     },
     "autoload": {
         "psr-4": {
-            "NikitaKiselev\\SendPulse\\": "src/"
+            "Rogersgti87\\SendPulse\\": "src/"
         }
     },
     "authors": [
