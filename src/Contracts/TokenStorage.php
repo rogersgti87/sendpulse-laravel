@@ -1,6 +1,6 @@
 <?php
 
-namespace NikitaKiselev\SendPulse\Contracts;
+namespace Rogersgti87\SendPulse\Contracts;
 
 interface TokenStorage
 {
