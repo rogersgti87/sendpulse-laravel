@@ -1,12 +1,12 @@
 {
-    "name": "rogersgti87/sendpulse",
+    "name": "rogersgti/sendpulse",
     "description": "SendPulse REST API client for Laravel",
     "require": {
         "guzzlehttp/guzzle": "^7.5.0"
     },
     "autoload": {
         "psr-4": {
-            "Rogersgti87\\SendPulse\\": "src/"
+            "Rogersgti\\SendPulse\\": "src/"
         }
     },
     "authors": [
