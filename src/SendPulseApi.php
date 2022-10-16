@@ -11,11 +11,11 @@ namespace Rogertiweb\SendPulse;
  *
  */
 
-use Rogertiweb\SendPulse\Contracts\TokenStorage;
+use Rogertiweb\sendpulse\Contracts\TokenStorage;
 use stdClass;
 use Memcache;
 use Exception;
-use Rogertiweb\SendPulse\Contracts\SendPulseApi as SendPulseApiContract;
+use Rogertiweb\sendpulse\Contracts\SendPulseApi as SendPulseApiContract;
 
 class SendpulseApi implements SendPulseApiContract
 {
