@@ -1,15 +1,15 @@
 <?php
 
-namespace Rogersgti87\SendPulse;
+namespace Rogertiweb\SendPulse;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
-use Rogersgti87\SendPulse\SendPulseApi;
-use Rogersgti87\SendPulse\Token\FileTokenStorage;
-use Rogersgti87\SendPulse\Contracts\TokenStorage;
-use Rogersgti87\SendPulse\Token\SessionTokenStorage;
+use Rogertiweb\SendPulse\SendPulseApi;
+use Rogertiweb\SendPulse\Token\FileTokenStorage;
+use Rogertiweb\SendPulse\Contracts\TokenStorage;
+use Rogertiweb\SendPulse\Token\SessionTokenStorage;
 use Illuminate\Contracts\Filesystem\Factory as Filesystem;
-use Rogersgti87\SendPulse\Contracts\SendPulseApi as SendPulseApiContract;
+use Rogertiweb\SendPulse\Contracts\SendPulseApi as SendPulseApiContract;
 
 class SendPulseProvider extends ServiceProvider
 {
