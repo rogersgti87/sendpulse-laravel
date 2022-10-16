@@ -11,13 +11,13 @@ namespace Rogertiweb\SendPulse;
  *
  */
 
-use Rogertiweb\sendpulse\Contracts\TokenStorage;
+use Rogertiweb\SendPulse\Contracts\TokenStorage;
 use stdClass;
 use Memcache;
 use Exception;
-use Rogertiweb\sendpulse\Contracts\SendPulseApi as SendPulseApiContract;
+use Rogertiweb\SendPulse\Contracts\SendPulseApi as SendPulseApiContract;
 
-class SendpulseApi implements SendPulseApiContract
+class SendPulseApi implements SendPulseApiContract
 {
     private $apiUrl = 'https://api.sendpulse.com';
 
