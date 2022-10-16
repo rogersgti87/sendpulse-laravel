@@ -17,7 +17,7 @@ use Memcache;
 use Exception;
 use Rogertiweb\SendPulse\Contracts\SendPulseApi as SendPulseApiContract;
 
-class SendPulseApi implements SendPulseApiContract
+class SendpulseApi implements SendPulseApiContract
 {
     private $apiUrl = 'https://api.sendpulse.com';
 
