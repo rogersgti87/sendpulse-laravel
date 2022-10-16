@@ -6,16 +6,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Rogertiweb\SendPulse\": "src/"
+            "Rogertiweb\\SendPulse\\": "src/"
         }
     },
       "extra": {
         "laravel": {
             "providers": [
-                "Rogertiweb\SendPulse\SendPulseProvider"
+                "Rogertiweb\\SendPulse\\SendPulseProvider"
             ],
             "aliases": {
-                "SendPulse": "Rogertiweb\SendPulse\SendPulse"
+                "SendPulse": "Rogertiweb\\SendPulse\\SendPulse"
             }
         }
     },
