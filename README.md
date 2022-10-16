@@ -1,30 +1,30 @@
-# Sendpulse API for Laravel 5
+# Sendpulse API for Laravel 9
 
-Sendpulse API package for Laravel 5
+Sendpulse API package for Laravel 9
 
 # Installation
 
 ```bash
-composer require nikitakiselev/sendpulse
+composer require rogertiweb/sendpulse
 ```
 
-Add `NikitaKiselev\SendPulse\SendPulseProvider::class` to providers
+Add `Rogertiweb\SendPulse\SendPulseProvider::class` to providers
 
 **config/app.php**
 ```php
 'providers' => [
-    NikitaKiselev\SendPulse\SendPulseProvider::class,
+    Rogertiweb\SendPulse\SendPulseProvider::class,
 ],
 
 'aliases' => [
-    'SendPulse' => NikitaKiselev\SendPulse\SendPulse::class,
+    'SendPulse' => Rogertiweb\SendPulse\SendPulse::class,
 ]
 ```
 
 Publish config
 
 ```bash
-php artisan vendor:publish --provider="NikitaKiselev\SendPulse\SendPulseProvider" --tag="config"
+php artisan vendor:publish --provider="Rogertiweb\SendPulse\SendPulseProvider" --tag="config"
 ```
 
 Set the api key variables in your `.env` file
@@ -36,7 +36,7 @@ SENDPULSE_API_SECRET=null
 
 # Usage API
 
-https://sendpulse.com/ru/integrations/api
+https://sendpulse.com/en/integrations/api
 
 ```php
 // From container
