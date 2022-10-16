@@ -1,9 +1,9 @@
 <?php
 
-namespace Rogersgti87\SendPulse;
+namespace Rogertiweb\SendPulse;
 
 use Illuminate\Support\Facades\Facade;
-use Rogersgti87\SendPulse\Contracts\SendPulseApi;
+use Rogertiweb\SendPulse\Contracts\SendPulseApi;
 
 class SendPulse extends Facade
 {
