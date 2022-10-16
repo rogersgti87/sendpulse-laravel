@@ -1,10 +1,10 @@
 <?php
 
-namespace Rogersgti87\SendPulse;
+namespace Rogertiweb\SendPulse;
 
 use Illuminate\Support\Manager;
-use Rogersgti87\SendPulse\Storage\FileTokenStorage;
-use Rogersgti87\SendPulse\Storage\SessionTokenStorage;
+use Rogertiweb\SendPulse\Storage\FileTokenStorage;
+use Rogertiweb\SendPulse\Storage\SessionTokenStorage;
 
 class TokenStorageManager extends Manager
 {
