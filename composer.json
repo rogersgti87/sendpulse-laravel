@@ -8,12 +8,7 @@
         "classmap": [
             "src/"
         ]
-    },
-      "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    },
+    },      
     "authors": [
         {
             "name": "Roger Guimaraes",
