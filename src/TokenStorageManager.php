@@ -15,7 +15,8 @@ class TokenStorageManager extends Manager
      */
     public function getDefaultDriver()
     {
-        return $this->app['config']['sendpulse.token_storage'];
+        return $this->config['sendpulse.token_storage'];
+
     }
 
     /**
@@ -23,8 +24,9 @@ class TokenStorageManager extends Manager
      */
     public function createFileDriver()
     {
+        //dd(app()->make(\Illuminate\Contracts\Filesystem\Factory::class));
         return new FileTokenStorage(
-            $this->app->make(\Illuminate\Contracts\Filesystem\Factory::class),
+            app()->make(\Illuminate\Contracts\Filesystem\Factory::class),
             $this->hashName()
         );
     }
@@ -35,20 +37,20 @@ class TokenStorageManager extends Manager
     public function createSessionDriver()
     {
         return new SessionTokenStorage(
-            $this->app->make(\Illuminate\Session\Store::class),
+            app()->make(\Illuminate\Session\Store::class),
             $this->hashName()
         );
     }
 
     /**
      * Get hash name
-     * 
+     *
      * @return string
      */
     protected function hashName()
     {
-        $userId = $this->app['config']->get('sendpulse.api_user_id');
-        $secret = $this->app['config']->get('sendpulse.api_secret');
+        $userId = $this->config->get('sendpulse.api_user_id');
+        $secret = $this->config->get('sendpulse.api_secret');
 
         return md5($userId . '::' . $secret);
     }
