@@ -10,13 +10,8 @@
         ]
     },
       "extra": {
-        "laravel": {
-            "providers": [
-                "Rogertiweb\\SendPulse\\SendPulseProvider"
-            ],
-            "aliases": {
-                "SendPulse": "Rogertiweb\\SendPulse\\SendPulse"
-            }
+        "branch-alias": {
+            "dev-master": "1.0-dev"
         }
     },
     "authors": [
