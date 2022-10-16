@@ -1,9 +1,9 @@
 <?php
 
-namespace Rogersgti87\SendPulse\Storage;
+namespace Rogertiweb\SendPulse\Storage;
 
 use Illuminate\Contracts\Filesystem\Factory;
-use Rogersgti87\SendPulse\Contracts\TokenStorage;
+use Rogertiweb\SendPulse\Contracts\TokenStorage;
 
 class FileTokenStorage implements TokenStorage
 {
