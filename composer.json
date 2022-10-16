@@ -9,6 +9,16 @@
             "Rogertiweb\\SendPulse\\": "src/"
         }
     },
+      "extra": {
+        "laravel": {
+            "providers": [
+                "Rogertiweb\\SendPulse\\SendPulseProvider"
+            ],
+            "aliases": {
+                "SendPulse": "Rogertiweb\\SendPulse\\SendPulse"
+            }
+        }
+    },
     "authors": [
         {
             "name": "Roger Guimaraes",
