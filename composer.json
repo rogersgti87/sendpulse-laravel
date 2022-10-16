@@ -4,10 +4,10 @@
     "require": {
         "guzzlehttp/guzzle": "^7.5.0"
     },
-    "autoload": {
-        "psr-4": {
-            "Rogertiweb\\SendPulse\\": "src/"
-        }
+   "autoload": {
+        "classmap": [
+            "src/"
+        ]
     },
       "extra": {
         "laravel": {
