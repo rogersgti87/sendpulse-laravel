@@ -1,18 +1,18 @@
 {
-    "name": "rogersgti87/sendpulse",
+    "name": "rogertiweb/sendpulse",
     "description": "SendPulse REST API client for Laravel",
     "require": {
         "guzzlehttp/guzzle": "^7.5.0"
     },
     "autoload": {
         "psr-4": {
-            "Rogersgti87\\SendPulse\\": "src/"
+            "Rogertiweb\\SendPulse\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Nikita Kiselev",
-            "email": "kiselev2008@gmail.com"
+            "name": "Roger Guimaraes",
+            "email": "rogersgti87@gmail.com"
         }
     ]
 }
