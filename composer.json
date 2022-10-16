@@ -6,7 +6,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rogertiweb\\sendpulse\\": "src/"
+            "Rogertiweb\\SendPulse\\": "src/"
         }
     },
     "authors": [
